@@ -7,6 +7,12 @@ client.on('ready',()=>{
     console.log(`Logged in as ${client.user.tag}!`);
 });
 
+client.on('messageCreate', msg =>{
+    if(msg.content === 'ping'){
+        msg.reply('Pong!');
+    }
+})
+
 // make sure this line comes in the last to login the user.
 
 client.login(process.env.CLIENT_TOKEN); // loggin bot in the server
